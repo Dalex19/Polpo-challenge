@@ -8,11 +8,12 @@ import { FaCamera, MdOutlineNavigateNext } from "react-icons/all";
 import takeScreen from "../hook/TakeScreen";
 
 export const Twitt = () => {
+  const chuckApi = 'https://api.chucknorris.io/jokes/random';
   const {date} = UseDate();
 
   const { getJoke, joke } = UseFetch();
   React.useEffect(() => {
-    getJoke();
+    getJoke(chuckApi);
   }, []);
 
   
@@ -31,10 +32,10 @@ export const Twitt = () => {
         <span className="text-gray-500">{date}</span>
       </p>
       <div className="col-span-3 row-span-2 flex flex-wrap justify-between items-center">
-        <p className="">{joke}</p>
+        <p className="">{joke.value}</p>
         <div className="w-[50%] flex justify-start gap-4 py-1">
           <button
-            onClick={getJoke}
+            onClick={() => getJoke(chuckApi)}
             className="text-3xl transition-all ease-in-out hover:scale-110"
           >
             <MdOutlineNavigateNext />
