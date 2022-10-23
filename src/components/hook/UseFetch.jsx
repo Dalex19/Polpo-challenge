@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import React from "react";
 
 export const UseFetch = () => {
-  const [joke, setJoke] = useState("");
+  const [joke, setJoke] = React.useState("");
 
-  const getJoke = () => {
-    fetch(`https://api.chucknorris.io/jokes/random`)
+  const getJoke = (url) => {
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => setJoke(data.value))
-      .catch((error) => console.log("tenemos una cagada" + error));
+      .then((data) => setJoke(data))
+      .catch((error) => console.log(`Ups! ${ error }`));
   };
   return { getJoke, joke };
 };
