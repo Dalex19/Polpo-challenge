@@ -2,7 +2,7 @@ import { MoreInfo } from "./MoreInfo";
 
 export const MainInfo = () => {
     return (
-      <div className="text-white flex flex-col gap-2">
+      <div className="text-white flex flex-col gap-2 border border-black">
         <h1 className="w-[90%] mx-auto flex flex-col text-lg">
           Chuck Norris
           <span className="text-gray-500 text-sm">@chucknorris</span>
