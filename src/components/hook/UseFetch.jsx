@@ -1,13 +1,13 @@
 import React from "react";
 
 export const UseFetch = () => {
-  const [joke, setJoke] = React.useState("");
+  const [data, setData] = React.useState([]);
 
-  const getJoke = (url) => {
+  const getInfo = (url) => {
     fetch(url)
-      .then((res) => res.json())
-      .then((data) => setJoke(data))
-      .catch((error) => console.log(`Ups! ${ error }`));
+      .then(res => res.json())
+      .then(req => setData(req))
+      .catch(error => console.log(`Ups! ${ error }`));
   };
-  return { getJoke, joke };
+  return [data, getInfo];
 };
