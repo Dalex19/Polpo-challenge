@@ -6,7 +6,7 @@ También puedes sacarle una captura de pantalla a la broma y ver su fecha de gen
 
 ---
 
-## Tecnologias
+## Tecnologías
 
 Una lista de tecnologías que use en este proyecto:
 
@@ -40,7 +40,8 @@ Uso de la libreria Html2Canvas para sacar una captura de pantalla al "twitt".
 Así como una función para saber la fecha actual y mostrarla en pantalla y aparentarlo más twitter.
 
 
-### Por correguir 
+### Por corregir
+
 A veces cuando hay click en alguno de los botones que ejecutan llamadas a la api, estos muestras un undefined en pantalla, de momento se corrigen volviendo hacer la petición o click.
 
 
