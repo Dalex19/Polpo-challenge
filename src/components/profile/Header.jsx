@@ -9,7 +9,6 @@ import { Categories } from "./Categories";
 import { BsThreeDotsVertical as Menu } from "react-icons/all";
 
 export const Header = () => {
-
   return (
     <section className="md:h-[60%] max-h-[580px] w-full md:border-b border-slate-500 flex flex-col">
       <div className="w-full h-[20%] md:h-[30%] ">

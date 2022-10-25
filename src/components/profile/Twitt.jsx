@@ -21,7 +21,6 @@ export const Twitt = () => {
   }, []);
 
   React.useEffect(() => {
-
     let newValue = ({value: `${data.value}`, categorie: 'random'})
     setJoke(newValue)
   }, [data])
@@ -41,7 +40,7 @@ export const Twitt = () => {
         <span className="text-gray-500">{date }</span>
       </p>
       <div className="col-span-3 row-span-2 flex flex-wrap relative justify-between items-center">
-        <p className="">{joke.value}</p>
+        <p className="">{(typeof joke.value === 'undefined') ? 'Loading' : `${joke.value}`}</p>
         
         <div className="w-[50%] flex justify-start gap-4 py-1">
         <span className="rounded-xl px-1 flex justify-center items-center bg-blue-500">{joke.categorie}</span>  
