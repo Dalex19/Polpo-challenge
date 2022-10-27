@@ -37,10 +37,10 @@ export const Twitt = () => {
       <p className="col-span-3 flex flex-wrap gap-x-2 self-center">
         <span className="font-bold">Chuck Norris</span>{" "}
         <span className="text-gray-500">@chucknorris</span>{" "}
-        <span className="text-gray-500">{date }</span>
+        <span className="text-gray-500">{date}</span>
       </p>
       <div className="col-span-3 row-span-2 flex flex-wrap relative justify-between items-center">
-        <p className="">{(typeof joke.value === 'undefined') ? 'Loading' : `${joke.value}`}</p>
+        <p className="">{joke.value}</p>
         
         <div className="w-[50%] flex justify-start gap-4 py-1">
         <span className="rounded-xl px-1 flex justify-center items-center bg-blue-500">{joke.categorie}</span>  
