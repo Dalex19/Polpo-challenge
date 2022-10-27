@@ -16,13 +16,29 @@ export const Categories = () => {
   }, []);
 
   const getJokeRandom = async () => {
-    getJokeR("https://api.chucknorris.io/jokes/random");
-    await setJoke({ value: `${jokeR.value}`, categorie: "random" });
+    await getJokeR("https://api.chucknorris.io/jokes/random");
+    const newData = {
+      value:
+        typeof jokeR.value === "undefined"
+          ? "sorry, intenta de nuevo"
+          : `${jokeR.value}`,
+      categorie: "random",
+    };
+    setJoke(newData);
   };
 
   const getJokeCate = async (cate) => {
-    getJokeC(`https://api.chucknorris.io/jokes/random?category=${cate}`);
-    await setJoke({ value: `${jokeC.value}`, categorie: `${cate}` });
+    await getJokeC(
+      `https://api.chucknorris.io/jokes/random?category=${cate}`
+    );
+    const newData = {
+      value:
+        typeof jokeC.value === "undefined"
+          ? "sorry, intenta de nuevo"
+          : `${jokeC.value}`,
+      categorie: `${cate}`,
+    };
+    setJoke(newData);
   };
 
   return (
